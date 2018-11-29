@@ -1,5 +1,5 @@
 # AvacadoBravado29
-<h1>straaaaaawbaaaaaarrrrryyyyysss<h1>
+straaaaaawbaaaaaarrrrryyyyysss
 
 Daring Fireball: Markdown Syntax Documentation
 https://daringfireball.net/projects/markdown/syntax
