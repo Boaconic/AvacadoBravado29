@@ -1,42 +1,73 @@
 var sq;
-var feed = [];
+var feed = []; // an empty array
 var numFood = 10;
+
+var a = [1,2,3];
 
 function setup(){
     createCanvas(640, 480);
     sq = new Rat();
+    
+    // initializing 10 pieces of food
+    for(var i = 0; i < numFood; i++) {
+        feed.push(new Food(random(width), random(height)));
+    }
 }
 
 function draw(){
     sq.display();
+    
+    // display all the food
+    for(var i = 0; i < numFood; i++) {
+        feed[i].display();
+    }
+}
+
+function mousePressed() {
+    sq.eat();
 }
 
 function Food(x, y){
     this.x = x;
     this.y = y;
     this.color = color(255, 0, 0);
+    this.foodSize = 50;
+    
     this.display = function(){
-        fill(250, 145, 12);
-        ellipse(this.x, this.y, 50, 50);
+        fill(this.color);
+        ellipse(this.x, this.y, this.foodSize, this.foodSize);
     }
 }
 
 function Rat(){
     
+    var x = mouseX;
+    var y = mouseY;
+    var diameter = 200;
+    
     this.getDistance = function(other){
-        var dist = Math.sqrt(Math.pow(x - other.x) + Math.pow(y - other.y));
+        var dist = Math.sqrt(Math.pow(x - other.x, 2) + Math.pow(y - other.y, 2));
         return dist;
     }
     
     this.eat = function(){
-        
+        console.log('try to eat');
+        for(var i = 0; i < numFood; i++) {
+            var food = feed[i];
+            var d = this.getDistance(food);
+            var r1 = food.foodSize / 2;
+            var r2 = diameter / 2;
+            if(r1 + r2 > d) {
+                console.log('hit');
+            }
+        }
     }
     
     this.display = function() {
         
         background('#FFFAED');
-        var x = mouseX;
-        var y = mouseY;
+        x = mouseX;
+        y = mouseY;
         
         //Rat
         
