@@ -1,7 +1,7 @@
 # AvacadoBravado29
 <h1>straaaaaawbaaaaaarrrrryyyyysss</h1>
 
-<b>Daring Fireball:</b> Markdown Syntax Documentation
+<b>Daring Fireball:</b> <i>Markdown Syntax Documentation</i>
 https://daringfireball.net/projects/markdown/syntax
 
 d'miv I
