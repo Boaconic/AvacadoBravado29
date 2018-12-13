@@ -40,17 +40,6 @@ function Food(x, y){
     }
 }
 
-function Teeth(){
-    var x = mouseX;
-    var y = mouseY;
-    
-    this.teeth = function(){
-        fill('#FFFFFF');
-        triangle(x+50, y, x, y-50, x, y-50);
-    }
-    
-}
-
 function Rat(){
     
     var x = mouseX;
@@ -194,7 +183,9 @@ function Rat(){
             triangle(x1, y1, x2, y2, x3, y3);
             triangle(x1, y1-35, x2-7, y2-20, x3-15, y3-35 );
             triangle(x1+15, y1-70, x2, y2-40, x3-12, y3-70);
-            triangle(x1+15, y1-70, x2+15, y2-55, x3+20, y3-125);
+            triangle(x1+15, y1-70, x2+15, y2-60, x3+20, y3-125);
+            triangle(x1+70, y1-110, x2+35, y2-75, x3+20, y3-125);
+            triangle(x1+70, y1-110, x2+55, y2-75, x3+90, y3-143);
         }
     
     }
