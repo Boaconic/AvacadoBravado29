@@ -72,19 +72,19 @@ function Rat(){
     
     this.display = function() {
         
-        if(keyIsPressed === true){
+        if(keyIsPressed === false){
             
             background('#FFFAED');
-            //x = mouseX;
-            //y = mouseY;
-            x = width/2;
-            y = height/2;
-            /*x1 = mouseX+20;
+            x = mouseX;
+            y = mouseY;
+            //x = width/2;
+            //y = height/2;
+            x1 = mouseX+20;
             y1 = mouseY+20;
             x2 = mouseX-20;
             y2 = mouseY+10;
             x3 = mouseX+10;
-            y3 = mouseY+20;*/
+            y3 = mouseY+20;
             
             
             //Rat
